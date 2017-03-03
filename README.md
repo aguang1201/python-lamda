@@ -116,3 +116,46 @@ show_images(images=[gray_image,binary_image,binary],titles=["Grayscale","Otsu Bi
 from skimage.filter import gaussian_filter  
 blurred_image = gaussian_filter(gray_image,sigma=20)  
 show_images(images=[gray_image,blurred_image],titles=["Gray Image","20 Sigma Blur"])  
+
+人間の虹彩の写真を導入して、画像の特徴を抽出して、分類します。
+画像から特徴を抽出するには、「Convolutional Neural Net」と呼ばれる方法です。
+"Convolutional Neural Netは主に下記の二つのフェーズを繰り返すことにより特徴抽出を行います。
+Convolutional層
+Pooling層"
+"これらの処理を何度も繰り返し、特徴を抽出し、得られた全特徴を用いて多層のニューラルネットやSVM
+（Support Vector Machine）を用いて予測を行うことになります。
+この一連の特徴抽出の過程がConvolutional Neural Netです。"
+
+画像の前処理
+画像特徴抽出
+
+1,faster R-CNN tensorflow实现	
+2,faster R-CNN训练自己的数据	
+3,GPU使用，CUNN编程	
+4,分布式训练	
+	
+batch_normalization位置	每次maxpooling之后，conv_2d或fully_connected之前
+线形回归，逻辑回归	损失函数：loss='mean_square'
+	"激活函数：中间层：activation='linear'
+最后一层：activation='sigmoid'
+损失函数有时用：loss='binary_crossentropy'"
+分类训练	"fully_connected之后接dropout
+前面的激活函数：activation='relu'
+分类时也就是最后一层激活函数：activation='softmax'"
+tf.layer	
+tf.slim	
+tf.learn	
+deeps	
+weights	
+Deconvolution	
+ethereon/caffe-tensorflow	
+wide deep learning	
+batch size	batch为32的时候，alex开始收敛，但是googlenet不收敛；提高batch size，googlenet开始收敛
+数据的预处理	"1,去均值(zero-center),将输入数据的各个维度都中心化到0
+2,归一化(normalize),将特征的幅度变换到统一范围（不一定是0-1之间）
+3,主成分分析(PCA)，一种降维的方法,例如把特征从二维分布转到一维分布
+4，白化（whitened）其实是指将特征转换成正态分布。比如圆形"
+tensorflow Multi-task	
+把公司员工的虹膜分为一类，不是公司员工的虹膜分为一类，都输入faster RCNN中训练	
+確率	
+算法，数据，硬件	

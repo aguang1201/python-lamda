@@ -159,3 +159,4 @@ tensorflow Multi-task
 把公司员工的虹膜分为一类，不是公司员工的虹膜分为一类，都输入faster RCNN中训练	
 確率	
 算法，数据，硬件	
+https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/slim

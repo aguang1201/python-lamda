@@ -1,4 +1,4 @@
-# python-lamda
+# python-lamda skimage
 	
 lambda	匿名函数	
 f=lambda x:x*x
@@ -93,3 +93,26 @@ np.min()
 np.argmax()
 np.argmin()
 np.sort()"	最值和排序：最值有np.max(),np.min() 他们都有axis和out（输出）参数, 而通过np.argmax(), np.argmin()可以得到取得最大或最小值时的 下标。排序通过np.sort(), 而np.argsort()得到的是排序后的数据原来位置的下标。					
+
+image = imread(r"C:\Users\Tavish\Desktop\7.jpg")  
+show_img(image)  
+  
+red, yellow =   image.copy(), image.copy()  
+red[:,:,(1,2)] = 0  
+yellow[:,:,2]=0  
+show_images(images=[red,yellow], titles=['Red Intensity','Yellow Intensity'])  
+  
+from skimage.color import rgb2gray  
+gray_image = rgb2gray(image)  
+show_images(images=[image,gray_image],titles=["Color","Grayscale"])  
+print "Colored image shape:", image.shape  
+print "Grayscale image shape:", gray_image.shape  
+  
+from skimage.filter import threshold_otsu  
+thresh = threshold_otsu(gray_image)  
+binary = gray_image > thresh  
+show_images(images=[gray_image,binary_image,binary],titles=["Grayscale","Otsu Binary"])  
+  
+from skimage.filter import gaussian_filter  
+blurred_image = gaussian_filter(gray_image,sigma=20)  
+show_images(images=[gray_image,blurred_image],titles=["Gray Image","20 Sigma Blur"])  

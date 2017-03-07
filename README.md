@@ -161,3 +161,5 @@ tensorflow Multi-task
 算法，数据，硬件关于slim
 https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/slim
 http://www.jiqizhixin.com/article/1474
+
+Tensor运算：http://www.jianshu.com/p/00ab12bc357c

@@ -158,5 +158,6 @@ batch size	batch为32的时候，alex开始收敛，但是googlenet不收敛；�
 tensorflow Multi-task	
 把公司员工的虹膜分为一类，不是公司员工的虹膜分为一类，都输入faster RCNN中训练	
 確率	
-算法，数据，硬件	
+算法，数据，硬件关于slim
 https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/slim
+http://www.jiqizhixin.com/article/1474

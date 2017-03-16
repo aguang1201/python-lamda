@@ -163,3 +163,29 @@ https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/slim
 http://www.jiqizhixin.com/article/1474
 
 Tensor运算：http://www.jianshu.com/p/00ab12bc357c
+
+caffe tensorflow	"https://my.oschina.net/yilian/blog/672135
+http://blog.csdn.net/u012235274/article/details/52593632"
+milti labels	"https://github.com/lan2720/cnn-for-captcha
+https://github.com/jg8610/multi-task-part-1-notebook/blob/master/Multi-Task%20Learning%20Tensorflow%20Part%201.ipynb"
+slice	http://qiita.com/supersaiakujin/items/464cc053418e9a37fa7b#slice
+concat	
+split	
+tile	
+pad	
+fill	
+constant	
+random_normal	
+truncated_normal	
+random_uniform	
+四种Cross Entropy算法	http://ms.csdn.net/geek/126833
+
+slim	"https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/slim
+http://www.jiqizhixin.com/article/1474"	
+slim.nets	https://github.com/tensorflow/models/tree/master/slim/nets	把所有的fc全变成了conv，看来大势已定。输入imagesize=224*224
+expand_dims	http://www.jianshu.com/p/00ab12bc357c	插入维
+tf.squeeze		减少维
+Image PreLoader	tflearn.data_utils.image_preloader (target_path, image_shape, mode='file', normalize=True, grayscale=False, categorical_labels=True, files_extension=None, filter_channel=False)	
+Build HDF5 Image Dataset	tflearn.data_utils.build_hdf5_image_dataset (target_path, image_shape, output_path='dataset.h5', mode='file', categorical_labels=True, normalize=True, grayscale=False, files_extension=None, chunks=False)	
+load_csv	tflearn.data_utils.load_csv (filepath, target_column=-1, columns_to_ignore=None, has_header=True, categorical_labels=False, n_classes=None)	
+	full-connect-{}'.format(i + 1)	

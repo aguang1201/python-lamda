@@ -191,3 +191,4 @@ load_csv	tflearn.data_utils.load_csv (filepath, target_column=-1, columns_to_ign
 	full-connect-{}'.format(i + 1)	
 
 Multi-Task Learning	https://jg8610.github.io/Multi-Task/
+tf.nn.l2_loss(Y-tf.matmul(X,W))==tf.pow(tf.add(Y,-tf.matmul(X,W)),2)

@@ -189,3 +189,5 @@ Image PreLoader	tflearn.data_utils.image_preloader (target_path, image_shape, mo
 Build HDF5 Image Dataset	tflearn.data_utils.build_hdf5_image_dataset (target_path, image_shape, output_path='dataset.h5', mode='file', categorical_labels=True, normalize=True, grayscale=False, files_extension=None, chunks=False)	
 load_csv	tflearn.data_utils.load_csv (filepath, target_column=-1, columns_to_ignore=None, has_header=True, categorical_labels=False, n_classes=None)	
 	full-connect-{}'.format(i + 1)	
+
+Multi-Task Learning	https://jg8610.github.io/Multi-Task/

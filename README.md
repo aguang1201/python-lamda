@@ -192,3 +192,8 @@ load_csv	tflearn.data_utils.load_csv (filepath, target_column=-1, columns_to_ign
 
 Multi-Task Learning	https://jg8610.github.io/Multi-Task/
 tf.nn.l2_loss(Y-tf.matmul(X,W))==tf.pow(tf.add(Y,-tf.matmul(X,W)),2)
+
+kaggle preprocessing：
+https://www.kaggle.com/gzuidhof/data-science-bowl-2017/full-preprocessing-tutorial
+https://www.kaggle.com/slsbigdata/data-science-bowl-2017/image-pre-processing
+http://www.jianshu.com/p/9bf31ac4f184

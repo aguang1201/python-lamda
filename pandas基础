@@ -195,3 +195,6 @@ df2.loc[2, [1, 2]]
 # ラベルが 1 の index は存在しないので NG! 
 df.loc[1, 2]
 # KeyError: 'the label [1] is not in the [index]'
+
+df2.get_value(2,'zqdm')
+df2.set_value(2,'zqdm','500000')

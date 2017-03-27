@@ -46,3 +46,17 @@ def loadTrainData():
 Sparse Logistic Regression	点击预测的稀疏线性模型
 import pandas as pd	
 image[image==-2000]=0	
+
+"classifier = learn.LinearClassifier(feature_columns=feature_columns, n_classes=10)
+classifier.fit(data, labels, batch_size=100, steps=1000)
+result = classifier.evaluate(test_data, test_labels)
+print result[""accuracy""]
+# here's one it gets right
+print (""Predicted %d, Label: %d"" % (classifier.predict(test_data[0]), test_labels[0]))
+display(0)
+# and one it gets wrong
+print (""Predicted %d, Label: %d"" % (classifier.predict(test_data[8]), test_labels[8]))
+display(8)"
+
+binary_image = np.array(image > -320, dtype=np.int8)+1
+有些地方乘以1，则可以将bool数组快速地转换为int数组

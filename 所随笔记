@@ -1,0 +1,48 @@
+
+文件名和class名可以不同，右面的captcha_cnn是文件名，CaptchaCNN是class名	from captcha_cnn import CaptchaCNN
+把_outputs摆平，比如[[0,1],[2,3]]变成[0,1,2,3]	tf.concat(1, self._outputs, name=scope.name)
+"正常用法
+# output
+[[ 1  2  3]
+ [ 4  5  6]
+ [ 7  8  9]
+ [10 11 12]]
+[[ 1  2  3  7  8  9]
+ [ 4  5  6 10 11 12]]"	"t1 = tf.constant([[1, 2, 3], [4, 5, 6]])
+t2 = tf.constant([[7, 8, 9], [10, 11, 12]])
+d1 = tf.concat(0, [t1, t2])
+d2 = tf.concat(1, [t1, t2])"
+
+Multi-Task Learning	https://jg8610.github.io/Multi-Task/
+tf.nn.l2_loss(Y1-Y1_layer)	tf.pow(tf.add(Y,-tf.matmul(X,W)),2,name="Loss")
+Enet	
+BN-AlexNet	
+CUDA,CUDNN	
+np.random.rand(2,3)	输出两行三列矩阵
+np.random.randn(2,3)	输出均值为0，标准差为1的两行三列的正态分布矩阵
+4*np.random.randn(2,3)+5	输出均值为5，标准差为4的两行三列的正态分布矩阵
+np.random.randint(5,size=(2,4))	"numpy.random.randint(low, high=None, size=None)
+low为下限，size为生成的array大小，如果high为none则生成0~low的均匀分布随机数，若指定了high，那么生产low~high的均匀分布随机数。如生产2×4的在（0，4）的array"
+
+apt-get	"apt-get update
+apt-get upgrade
+apt-get install"	可在线安装
+dpkg		安装本地文件
+gedit	gedit ~/.bash_profile	编辑文件=vi,vim
+source	source ~/.bash_profile	执行文件，使其在当前环境下生效
+
+def loadTrainData():  
+    l=[]  
+    with open('train.csv') as file:  
+         lines=csv.reader(file)  
+         for line in lines:  
+             l.append(line) #42001*785  
+    l.remove(l[0])  
+    l=array(l)  
+    label=l[:,0]  
+    data=l[:,1:]  
+    return nomalizing(toInt(data)),toInt(label) 
+
+Sparse Logistic Regression	点击预测的稀疏线性模型
+import pandas as pd	
+image[image==-2000]=0	

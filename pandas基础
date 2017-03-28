@@ -213,3 +213,5 @@ Out[260]:
 4  600575  hsdz5
 5  600576  hsdz6
 6  600578  hsdz7
+
+Series.value_counts返回的是该Series对象中独一无二的元素的个数,labels_df.cancer.value_counts()

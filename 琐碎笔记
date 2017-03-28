@@ -60,3 +60,6 @@ display(8)"
 
 binary_image = np.array(image > -320, dtype=np.int8)+1
 有些地方乘以1，则可以将bool数组快速地转换为int数组
+
+matplotlib:
+http://www.cnblogs.com/laoniubile/p/5893286.html

@@ -198,3 +198,18 @@ df.loc[1, 2]
 
 df2.get_value(2,'zqdm')
 df2.set_value(2,'zqdm','500000')
+
+get_value,set_value方法 根据行标签和列标签来选取单个值
+In [257]: df2.get_value(2,'zqdm')
+Out[257]: '600573'
+
+In [260]: df2.set_value(2,'zqdm','500000')
+Out[260]:
+     zqdm   zqmc
+0  600571  hddz1
+1  600572  hsdz2
+2  500000  hsdz3
+3  600574  hsdz4
+4  600575  hsdz5
+5  600576  hsdz6
+6  600578  hsdz7

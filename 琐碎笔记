@@ -63,3 +63,6 @@ binary_image = np.array(image > -320, dtype=np.int8)+1
 
 matplotlib:
 http://www.cnblogs.com/laoniubile/p/5893286.html
+yield	http://www.cnblogs.com/tqsummer/archive/2010/12/27/1917927.html
+math.ceil	http://www.runoob.com/python/func-number-ceil.html
+zip	http://www.cnblogs.com/frydsh/archive/2012/07/10/2585370.html

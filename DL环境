@@ -1,3 +1,26 @@
 http://www.robotics.ren/2016/05/04/ubuntu-cudnn-conda-pycharm/
 http://wiki.ubuntu.org.cn/NVIDIA
 https://zhuanlan.zhihu.com/p/25429108
+
+python2转python3
+在命令行到项目的根目录下
+执行2to3 . -w
+把常数定义放在configs.py中
+然后from configs import *
+
+
+error message	                                          原因	                                解决策
+InternalError: Dst tensor is not initialized.	          GPU的memory相关	                Nvidia-smi，查看GPU占用情况，把没用的关掉
+ResourceExhaustedError	       资源耗尽，矩阵尺寸过大等导致计算量太大，比如：32×128×128×128×64	 减少batchsize，filtersize，outputchanel
+切片size=（64,128,128,128），与input-data size不符	预处理图片时少了一维（灰度）	取数据时，插入最后一维np.expand_dims(line[0], -1)，或者X = np.array(X).reshape([-1,128,128,128,1])
+设置best_checkpoint_path，就不能设置max_checkpoints，否则best_checkpoint_path不起作用		
+tensorflow.python.framework.errors_impl.InvalidArgumentError: Unknown input node	"
+指定GPU时，有的op不能在GPU做，只能在CPU做
+    with tf.device('/gpu:1'):
+        network = cnn3d.create_cnn_3d_alex()
+    with tf.device('/cpu:0'):
+        model = tflearn.DNN(network)"	"允许显存增长。如果设置为 True，分配器不会预先分配一定量 GPU 显存，而是先分配一小块，必要时增加显存分配
+Bool allow_growth = 4;在单机多卡运行 TensorFlow 时，尝试设置其他 config.gpu_options 参数。nvidia-smi -l 实时查看显卡信息
+config = tf.ConfigProto()
+config.gpu_options.allow_growth = True
+tf.add_to_collection('graph_config', config)"
